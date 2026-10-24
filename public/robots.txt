@@ -1,0 +1,22 @@
+# AshbitSoft Robots.txt
+# https://ashbit.in
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: *
+Allow: /
+
+# Disallow build artifacts and private routes
+Disallow: /api/
+Disallow: /admin/
+Disallow: /temp/
+
+# Host declaration
+Host: https://ashbit.in
+
+# Sitemap location
+Sitemap: https://ashbit.in/sitemap.xml

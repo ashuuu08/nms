@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- ═══ Core Commercial Pages ═══ -->
+  <url>
+    <loc>https://ashbit.in/</loc>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://ashbit.in/services</loc>
+    <priority>0.95</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://ashbit.in/services/development</loc>
+    <priority>0.90</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://ashbit.in/services/automation</loc>
+    <priority>0.90</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://ashbit.in/services/ai</loc>
+    <priority>0.90</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://ashbit.in/services/marketing</loc>
+    <priority>0.85</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://ashbit.in/pricing</loc>
+    <priority>0.90</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://ashbit.in/contact</loc>
+    <priority>0.95</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- ═══ Solutions by Segment ═══ -->
+  <url>
+    <loc>https://ashbit.in/solutions/startups</loc>
+    <priority>0.85</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://ashbit.in/solutions/smes</loc>
+    <priority>0.85</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://ashbit.in/solutions/enterprises</loc>
+    <priority>0.85</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- ═══ Features ═══ -->
+  <url>
+    <loc>https://ashbit.in/features</loc>
+    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- ═══ Authority & Trust (E-E-A-T) ═══ -->
+  <url>
+    <loc>https://ashbit.in/company/about</loc>
+    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://ashbit.in/company/faq</loc>
+    <priority>0.75</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://ashbit.in/company/security</loc>
+    <priority>0.70</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://ashbit.in/company/policy</loc>
+    <priority>0.60</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+
+  <!-- ═══ Blog Index ═══ -->
+  <url>
+    <loc>https://ashbit.in/blog</loc>
+    <priority>0.90</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- ═══ Individual Blog Articles ═══ -->
+  <url>
+    <loc>https://ashbit.in/blog/automate-invoices-google-apps-script</loc>
+    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://ashbit.in/blog/mern-stack-scalable-app</loc>
+    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://ashbit.in/blog/supabase-vs-firebase-2026</loc>
+    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://ashbit.in/blog/ai-chatbots-small-business-guide</loc>
+    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://ashbit.in/blog/seo-strategy-startups-2026</loc>
+    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://ashbit.in/blog/java-spring-boot-vs-nodejs-backend</loc>
+    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://ashbit.in/blog/build-saas-mvp-6-weeks</loc>
+    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://ashbit.in/blog/google-apps-script-5-automations</loc>
+    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://ashbit.in/blog/website-losing-customers-ux-fixes</loc>
+    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://ashbit.in/blog/nodejs-api-security-checklist</loc>
+    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+</urlset>
