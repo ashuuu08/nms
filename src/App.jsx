@@ -18,6 +18,8 @@ import Policy   from './pages/Policy';
 import Contact  from './pages/Contact';
 import Blog     from './pages/Blog';
 import BlogPost from './pages/BlogPost';
+import Products from './pages/Products';
+import ProductDetail from './pages/ProductDetail';
 import NotFound from './pages/NotFound';
 import './App.css';
 
@@ -57,6 +59,8 @@ const AppContent = () => (
         <Route path="/solutions/enterprises"  element={<Enterprises />} />
         <Route path="/pricing"                element={<Pricing />} />
         <Route path="/features"               element={<Features />} />
+        <Route path="/products"               element={<Products />} />
+        <Route path="/products/retail-management" element={<ProductDetail />} />
         <Route path="/company/about"          element={<About />} />
         <Route path="/company/faq"            element={<FAQ />} />
         <Route path="/company/security"       element={<Security />} />

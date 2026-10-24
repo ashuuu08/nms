@@ -1,51 +1,67 @@
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import {
-  Code2, Target, HeartHandshake, Award,
-  MapPin, CheckCircle2, ArrowRight, ShieldCheck, Users
+  MapPin, CheckCircle2, ShieldCheck, Zap, Users,
+  ArrowRight, Target, HeartHandshake, Quote, MessageSquare
 } from 'lucide-react';
-import { founder, locations, stats } from '../data/siteData';
+import { founder, locations, contact } from '../data/siteData';
 
 const VALUES = [
   {
-    icon: Code2,
-    title: 'Code as Craftsmanship',
-    desc: 'We write software to be read and maintained for years, not just until launch day. Clean syntax, strict linting, and thorough testing.',
-  },
-  {
     icon: Target,
-    title: 'Business-First Architecture',
-    desc: 'Every technical choice must directly serve a commercial outcome — lowering operational costs, speeding up load times, or driving conversion.',
+    title: 'Precision Engineering',
+    desc: 'We write lean, maintainable, production-ready code. No bloated dependencies, no hasty shortcuts that come back to haunt your business months later.',
   },
   {
     icon: ShieldCheck,
-    title: 'Radical Transparency',
-    desc: 'No vague progress reports or opaque fees. You see live staging builds, daily commits, and itemized milestone breakdowns from day one.',
+    title: 'Absolute Code Sovereignty',
+    desc: 'You hold 100% ownership of your source code, database credentials, and deployment infrastructure. Zero proprietary vendor lock-in, forever.',
   },
   {
     icon: HeartHandshake,
-    title: 'Enduring Partnerships',
-    desc: 'We do not abandon clients post-launch. Every system includes dedicated warranty support, documentation, and long-term scaling guidance.',
+    title: 'Accessible & Accountable',
+    desc: 'We operate registered physical studios in Anuppur and Shahdol. You interact directly with engineers who build your product—not intermediate sales reps.',
+  },
+  {
+    icon: Zap,
+    title: 'Value-First Velocity',
+    desc: 'Every technical sprint is tied to measurable business ROI: eliminating hours of manual paperwork, automating invoice dispatch, or increasing transaction speed.',
   },
 ];
 
 const MILESTONES = [
-  { year: '2023', title: 'Founded in Anuppur & Shahdol', desc: 'Started with a mission to deliver Silicon-Valley caliber engineering to regional enterprises and modern startups.' },
-  { year: '2024', title: '50+ Deployments Milestone', desc: 'Delivered web platforms, automated ERP pipelines, and Google Workspace automations saving thousands of team hours.' },
-  { year: '2025', title: 'AI & Enterprise Specialization', desc: 'Integrated OpenAI APIs, custom vector databases, and Java Spring Boot architectures for high-throughput clients.' },
-  { year: '2026', title: 'Dual-Hub Regional Expansion', desc: 'Cemented regional presence across Anuppur (484223) & Shahdol (484001) while serving international client bases.' },
+  {
+    year: '2022',
+    title: 'Founded in Anuppur, MP',
+    desc: 'AshbitSoft established by Ashish Kumar Rathour with a mission to deliver top-tier, custom software engineering to businesses in Central India and beyond.',
+  },
+  {
+    year: '2023',
+    title: 'Studio Expansion to Shahdol',
+    desc: 'Opened our second operational studio on Station Road, Shahdol, scaling our full-stack web and Google Workspace automation engineering capacity.',
+  },
+  {
+    year: '2024',
+    title: 'Enterprise & SaaS Specialization',
+    desc: 'Shipped 50+ custom digital platforms, multi-clinic management systems, and automated billing suites across Madhya Pradesh and international clients.',
+  },
+  {
+    year: '2026 (Current)',
+    title: 'AI Automation & Cloud Ecosystems',
+    desc: 'Engineering next-generation AI pipelines, bespoke ERP architectures, and offline-first mobile PWAs with 100% intellectual property ownership.',
+  },
 ];
 
 const About = () => {
   return (
     <div className="about-page">
       <SEO
-        title="About AshbitSoft | Software Engineering Team & Mission"
-        description="Learn about AshbitSoft's engineering ethos, founder Ashish Kumar, our client success track record, and our development methodology."
+        title="About AshbitSoft | Leadership, Story & Engineering Ethos"
+        description="Learn about AshbitSoft's engineering ethos, founder Ashish Kumar Rathour, our client success track record, and our development methodology."
         canonical="/company/about"
       />
 
-      {/* Hero */}
+      {/* Hero Section */}
       <section className="page-hero section--navy">
         <div className="container">
           <span className="eyebrow eyebrow--cyan">Our Story &amp; Purpose</span>
@@ -58,10 +74,11 @@ const About = () => {
         </div>
       </section>
 
-      {/* Narrative Section */}
+      {/* Narrative Section with Restored Classic 2-Column Layout */}
       <section className="section">
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '48px', alignItems: 'center' }}>
+            {/* Left Narrative Column */}
             <div>
               <span className="eyebrow">Who We Are</span>
               <h2 className="display-md mt-16" style={{ marginBottom: '20px' }}>
@@ -83,16 +100,17 @@ const About = () => {
               </div>
             </div>
 
-            {/* Founder Card */}
+            {/* Right Classic Founder & Developer Card */}
             <div style={{
               background: 'var(--surface)',
               border: '1px solid var(--border-soft)',
               borderRadius: 'var(--radius-xl)',
-              padding: '40px',
+              padding: '36px 32px',
               boxShadow: 'var(--shadow-md)',
               position: 'relative',
               overflow: 'hidden'
             }}>
+              {/* Top Accent Gradient Bar */}
               <div style={{
                 position: 'absolute',
                 top: 0,
@@ -101,20 +119,90 @@ const About = () => {
                 height: 4,
                 background: 'linear-gradient(90deg, var(--blue), var(--cyan))'
               }} />
-              <span className="eyebrow" style={{ color: 'var(--blue)' }}>Leadership</span>
-              <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginTop: '8px', marginBottom: '4px' }}>
-                {founder.name}
-              </h3>
-              <p style={{ fontSize: '0.875rem', color: 'var(--text-muted)', marginBottom: '16px' }}>
-                {founder.role}
-              </p>
-              <p style={{ fontSize: '0.9375rem', color: 'var(--text-body)', lineHeight: '1.7', marginBottom: '20px' }}>
+
+              {/* Founder Header with Crisp High-Resolution Portrait */}
+              <div style={{ display: 'flex', alignItems: 'center', gap: '18px', marginBottom: '18px' }}>
+                <img
+                  src={founder.image}
+                  alt={founder.name}
+                  style={{
+                    width: '76px',
+                    height: '76px',
+                    borderRadius: '50%',
+                    objectFit: 'cover',
+                    objectPosition: 'center 15%',
+                    border: '3px solid #FFFFFF',
+                    boxShadow: '0 4px 14px rgba(16, 43, 92, 0.15)',
+                    imageRendering: '-webkit-optimize-contrast',
+                    flexShrink: 0
+                  }}
+                />
+                <div>
+                  <span className="eyebrow" style={{ color: 'var(--blue)', marginBottom: '2px', display: 'inline-block' }}>Leadership &amp; Engineering</span>
+                  <h3 style={{ fontSize: '1.35rem', fontWeight: 800, margin: '2px 0 2px', color: 'var(--navy)' }}>
+                    {founder.name}
+                  </h3>
+                  <p style={{ fontSize: '0.8125rem', fontWeight: 600, color: 'var(--text-muted)', margin: 0 }}>
+                    {founder.role}
+                  </p>
+                </div>
+              </div>
+
+              {/* Founder & Developer Signature Quote */}
+              <div style={{
+                background: '#FAFBFD',
+                borderLeft: '3px solid var(--blue)',
+                borderRadius: '0 var(--radius-sm) var(--radius-sm) 0',
+                padding: '14px 16px',
+                marginBottom: '16px'
+              }}>
+                <Quote size={18} style={{ color: 'var(--blue)', opacity: 0.4, marginBottom: 4 }} />
+                <p style={{
+                  fontSize: '0.875rem',
+                  fontStyle: 'italic',
+                  fontWeight: 500,
+                  color: 'var(--navy)',
+                  lineHeight: '1.6',
+                  margin: 0
+                }}>
+                  "True software craftsmanship isn't about using complex buzzwords. It's about engineering systems so dependable and intuitive that you shut your laptop at 6 PM knowing every order, invoice, and rupee is completely accounted for."
+                </p>
+              </div>
+
+              {/* Founder Bio */}
+              <p style={{ fontSize: '0.875rem', color: 'var(--text-body)', lineHeight: '1.65', marginBottom: '16px' }}>
                 "{founder.bio}"
               </p>
-              <div style={{ borderTop: '1px solid var(--border-soft)', paddingTop: '16px' }}>
-                <p style={{ fontSize: '0.8125rem', color: 'var(--text-muted)' }}>
-                  Active contributor and architect specializing in Full-Stack Web Development, Google Apps Script automation, and high-performance system design.
-                </p>
+
+              {/* Footer Note & Direct Connection */}
+              <div style={{
+                borderTop: '1px solid var(--border-soft)',
+                paddingTop: '14px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                flexWrap: 'wrap',
+                gap: '10px'
+              }}>
+                <span style={{ fontSize: '0.78125rem', color: 'var(--text-muted)' }}>
+                  Active full-stack architect · Direct client delivery
+                </span>
+                <a
+                  href={`https://wa.me/${contact.whatsappRaw}?text=Hi%20Ashish,%20I'd%20like%20to%20discuss%20a%20software%20project.`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    fontSize: '0.8125rem',
+                    fontWeight: 700,
+                    color: 'var(--blue)',
+                    textDecoration: 'none',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '4px'
+                  }}
+                >
+                  <MessageSquare size={14} /> Connect on WhatsApp
+                </a>
               </div>
             </div>
           </div>

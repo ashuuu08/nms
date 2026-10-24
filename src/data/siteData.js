@@ -19,6 +19,7 @@ export const siteConfig = {
 export const founder = {
   name: 'Ashish Kumar Rathour',
   role: 'Founder & Principal Engineer',
+  image: '/founder_image%20.png',
   bio: 'Full-stack software architect specializing in scalable web ecosystems, Google Workspace workflow automations, and resilient cloud systems for growing enterprises.',
 };
 
@@ -85,8 +86,13 @@ export const cta = {
 };
 
 export const navLinks = [
+  { name: 'Products', path: '/products', children: [
+    { name: 'All Products Overview', path: '/products', desc: 'Software built to solve real business problems' },
+    { name: 'Retail Management SaaS', path: '/products/retail-management', desc: 'Billing & customer retention platform (Coming Soon)' },
+  ]},
   { name: 'Services', path: '/services' },
   { name: 'Solutions', path: null, children: [
+    { name: 'All Solutions Overview', path: '/solutions', desc: 'Browse our complete catalog of business systems' },
     { name: 'For Startups',   path: '/solutions/startups',   desc: 'Fast MVP builds & scalable foundations' },
     { name: 'For SMEs',       path: '/solutions/smes',       desc: 'Process automation & system modernization' },
     { name: 'For Enterprises',path: '/solutions/enterprises',desc: 'High-security custom digital ecosystems' },

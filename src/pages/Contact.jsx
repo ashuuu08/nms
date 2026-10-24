@@ -13,7 +13,7 @@ const Contact = () => {
     email: '',
     phone: '',
     service: 'Full-Stack Web Development',
-    budget: '₹50,000 – ₹1,50,000',
+    budget: 'Starter MVP / Workflow Automation',
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
@@ -159,10 +159,10 @@ const Contact = () => {
                       value={formData.budget}
                       onChange={handleChange}
                     >
-                      <option value="Under ₹50,000">Under ₹50,000 (Small script / automation)</option>
-                      <option value="₹50,000 – ₹1,50,000">₹50,000 – ₹1,50,000 (Standard MVP / web app)</option>
-                      <option value="₹1,50,000 – ₹3,50,000">₹1,50,000 – ₹3,50,000 (Full-scale custom portal)</option>
-                      <option value="₹3,50,000+">₹3,50,000+ (Enterprise / dedicated engineering)</option>
+                      <option value="Starter MVP / Workflow Automation">Starter MVP / Workflow Automation</option>
+                      <option value="Full-Stack Custom Web App">Full-Stack Custom Web Application</option>
+                      <option value="Custom ERP & Operations Portal">Custom ERP & Operations Portal</option>
+                      <option value="Enterprise Architecture / Dedicated Squad">Enterprise Architecture / Dedicated Squad</option>
                     </select>
                   </div>
 

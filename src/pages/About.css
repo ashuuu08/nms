@@ -1,0 +1,220 @@
+/* ═══════════════════════════════════════════════════════
+   ASHBITSOFT — About Page Classic Styles
+═══════════════════════════════════════════════════════ */
+
+.about-page {
+  overflow-x: hidden;
+}
+
+/* ── Founder & Developer Showcase Section ── */
+.founder-showcase-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 12px 40px rgba(16, 43, 92, 0.07);
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  overflow: hidden;
+  position: relative;
+  margin-top: 48px;
+}
+
+.founder-showcase-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--blue), var(--cyan), var(--teal));
+  z-index: 2;
+}
+
+/* Founder Portrait Photo Container */
+.founder-photo-wrap {
+  position: relative;
+  background: #09152B;
+  overflow: hidden;
+  display: flex;
+}
+
+.founder-photo-img {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  max-height: 520px;
+  object-fit: cover;
+  object-position: center 15%;
+  display: block;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.founder-showcase-card:hover .founder-photo-img {
+  transform: scale(1.03);
+}
+
+.founder-photo-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 20px 16px;
+  background: linear-gradient(180deg, transparent 0%, rgba(9, 21, 43, 0.85) 100%);
+  color: #FFFFFF;
+}
+
+.founder-photo-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.71875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cyan);
+}
+
+/* Founder Details & Signature Quote */
+.founder-content-wrap {
+  padding: 44px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.founder-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.founder-name {
+  font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+  font-weight: 900;
+  color: var(--navy);
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  margin-bottom: 6px;
+}
+
+.founder-role-title {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--blue);
+  margin-bottom: 24px;
+}
+
+/* Classic Pull-Quote */
+.founder-classic-quote {
+  position: relative;
+  background: #FAFBFD;
+  border-left: 3px solid var(--blue);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+}
+
+.quote-mark {
+  font-size: 2.5rem;
+  font-family: Georgia, serif;
+  color: rgba(21, 94, 239, 0.25);
+  line-height: 1;
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  pointer-events: none;
+}
+
+.quote-text {
+  font-size: 1.05rem;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--navy);
+  line-height: 1.65;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.founder-bio-text {
+  font-size: 0.90625rem;
+  line-height: 1.7;
+  color: var(--text-body);
+  margin-bottom: 24px;
+}
+
+/* Credentials Pill Row */
+.founder-creds-strip {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-soft);
+  margin-bottom: 24px;
+}
+
+.cred-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.cred-item svg {
+  color: var(--teal);
+}
+
+.founder-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .founder-showcase-card {
+    grid-template-columns: 1fr;
+  }
+
+  .founder-photo-img {
+    max-height: 380px;
+    object-position: center 20%;
+  }
+
+  .founder-content-wrap {
+    padding: 32px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .founder-content-wrap {
+    padding: 24px 18px;
+  }
+
+  .founder-photo-img {
+    max-height: 320px;
+  }
+
+  .quote-text {
+    font-size: 0.9375rem;
+  }
+
+  .founder-actions-row {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .founder-actions-row .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

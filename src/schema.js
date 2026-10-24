@@ -17,8 +17,12 @@ export const organizationSchema = {
     "height": "512"
   },
   "image": "https://ashbit.in/logo.png",
-  "description": "Custom software development, web applications, and workflow automation solutions for startups, SMEs, and enterprises.",
-  "founder": { "@type": "Person", "name": "Ashish Kumar" },
+  "founder": {
+    "@type": "Person",
+    "name": "Ashish Kumar Rathour",
+    "jobTitle": "Founder & Principal Systems Architect",
+    "image": "https://ashbit.in/founder_image%20.png"
+  },
   "sameAs": [
     "https://www.linkedin.com/company/ashbitsoft",
     "https://github.com/ashbitsoft",

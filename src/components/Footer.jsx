@@ -19,11 +19,11 @@ const Footer = () => {
   ];
 
   const solutionLinks = [
+    { name: 'Products & Platforms', to: '/products' },
+    { name: 'All Solutions',   to: '/solutions' },
     { name: 'For Startups',    to: '/solutions/startups' },
     { name: 'For SMEs',        to: '/solutions/smes' },
     { name: 'For Enterprises', to: '/solutions/enterprises' },
-    { name: 'Pricing',         to: '/pricing' },
-    { name: 'Features',        to: '/features' },
   ];
 
   const companyLinks = [

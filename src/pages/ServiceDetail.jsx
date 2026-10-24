@@ -31,6 +31,20 @@ const SERVICE_DATA = {
     h1: 'Performance Marketing & SEO Growth Engineering',
     features: ['Technical SEO & Core Web Vitals', 'PPC campaign management', 'Content strategy & creation', 'Social media marketing', 'Conversion rate optimisation', 'Analytics & performance reporting'],
   },
+  mobile: {
+    title: 'Mobile App Development (iOS & Android)',
+    metaTitle: 'Mobile App Development Services (iOS & Android)',
+    metaDesc: 'Native and cross-platform React Native mobile applications engineered with offline-first architecture, device hardware sync, and smooth 60fps UX.',
+    h1: 'Native & Cross-Platform Mobile Application Development',
+    features: ['React Native cross-platform apps', 'Native iOS & Android APIs', 'Offline-first SQLite local caching', 'Push notification pipelines', 'App Store & Google Play deployment', 'Bluetooth & camera hardware sync'],
+  },
+  enterprise: {
+    title: 'Java Spring Boot & Enterprise Systems',
+    metaTitle: 'Java Spring Boot & Enterprise Backend Architecture',
+    metaDesc: 'Robust Java Spring Boot microservices, high-concurrency relational data pipelines, and bank-grade backend architectures for large organizations.',
+    h1: 'Java Spring Boot & Enterprise Microservices Architecture',
+    features: ['Java Spring Boot microservices', 'High-throughput event streaming', 'PostgreSQL & relational database clustering', 'Zero-downtime rolling deployments', 'Role-based access & immutable audit trails', 'Legacy enterprise system modernization'],
+  },
 };
 
 const ServiceDetail = () => {

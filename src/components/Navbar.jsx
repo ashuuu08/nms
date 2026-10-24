@@ -76,16 +76,33 @@ const Navbar = () => {
           <ul className="navbar__links" role="list">
             {navLinks.map((link) =>
               link.children ? (
-                <li key={link.name} className="navbar__item navbar__item--dropdown">
-                  <button
-                    className={`navbar__btn ${link.children.some(c => isActive(c.path)) ? 'active' : ''}`}
-                    onClick={() => handleDropdown(link.name)}
-                    aria-expanded={openDropdown === link.name}
-                    aria-haspopup="true"
-                  >
-                    {link.name}
-                    <ChevronDown size={14} className={`navbar__chevron ${openDropdown === link.name ? 'open' : ''}`} />
-                  </button>
+                <li
+                  key={link.name}
+                  className="navbar__item navbar__item--dropdown"
+                  onMouseEnter={() => setOpenDropdown(link.name)}
+                  onMouseLeave={() => setOpenDropdown(null)}
+                >
+                  {link.path ? (
+                    <Link
+                      to={link.path}
+                      className={`navbar__btn ${isActive(link.path) || link.children.some(c => isActive(c.path)) ? 'active' : ''}`}
+                      onClick={() => setOpenDropdown(null)}
+                      aria-haspopup="true"
+                    >
+                      {link.name}
+                      <ChevronDown size={14} className={`navbar__chevron ${openDropdown === link.name ? 'open' : ''}`} />
+                    </Link>
+                  ) : (
+                    <button
+                      className={`navbar__btn ${link.children.some(c => isActive(c.path)) ? 'active' : ''}`}
+                      onClick={() => handleDropdown(link.name)}
+                      aria-expanded={openDropdown === link.name}
+                      aria-haspopup="true"
+                    >
+                      {link.name}
+                      <ChevronDown size={14} className={`navbar__chevron ${openDropdown === link.name ? 'open' : ''}`} />
+                    </button>
+                  )}
 
                   {openDropdown === link.name && (
                     <div className="navbar__dropdown" role="menu">

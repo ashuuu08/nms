@@ -9,7 +9,8 @@ import {
   Globe, Smartphone, ShoppingCart, RefreshCw,
   FolderSync, HelpCircle, Sparkles, Laptop,
   TrendingUp, CheckCircle, Search, Layers,
-  Activity, ArrowDownRight
+  Activity, ArrowDownRight, MessagesSquare, Eye,
+  Rocket, Headphones
 } from 'lucide-react';
 import TestimonialsMarquee from '../components/TestimonialsMarquee';
 import { contact, locations, founder, stats } from '../data/siteData';
@@ -196,31 +197,90 @@ const SIMPLIFIED_SERVICES = [
   },
 ];
 
-/* ── Realistic Demonstration Architecture Showcase ── */
-const DEMO_SHOWCASES = [
+/* ── Featured Solutions Showcase (Jabil-Inspired Visual Cards) ── */
+const FEATURED_SOLUTIONS = [
   {
-    title: 'Order Management & Automated Invoicing Hub',
-    demonstrationTag: 'Demonstration Architecture · Retail & Distribution',
-    description: 'A connected management portal that combines incoming orders, generates GST invoices automatically, and updates inventory records in real time.',
-    benefit: 'Eliminates 5+ hours of manual data entry every single day.',
-    keyFeatures: ['Instant PDF invoice generation', 'Google Drive & Sheets live sync', 'WhatsApp receipt dispatch', 'Low-stock automated alerts'],
+    title: 'Order Management\n& Invoicing',
+    tag: 'Retail & Distribution',
     link: '/services/development',
+    accent: '#12CDEB',
+    icon: ShoppingCart,
+    // Inline SVG illustration paths (document + gear)
+    illustration: (
+      <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="featured-card__illu">
+        <rect x="16" y="10" width="36" height="48" rx="4" stroke="#12CDEB" strokeWidth="1.5" opacity="0.6" />
+        <line x1="24" y1="22" x2="44" y2="22" stroke="#12CDEB" strokeWidth="1.2" opacity="0.4" />
+        <line x1="24" y1="30" x2="40" y2="30" stroke="#12CDEB" strokeWidth="1.2" opacity="0.4" />
+        <line x1="24" y1="38" x2="36" y2="38" stroke="#12CDEB" strokeWidth="1.2" opacity="0.4" />
+        <circle cx="54" cy="50" r="16" stroke="#16C7B7" strokeWidth="1.5" opacity="0.5" />
+        <path d="M48 50 L54 44 L60 50 M54 44 V58" stroke="#16C7B7" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.7" />
+        <path d="M20 60 L20 64 C20 66 22 68 24 68 L46 68" stroke="#12CDEB" strokeWidth="1" strokeDasharray="3 3" opacity="0.3" />
+      </svg>
+    ),
   },
   {
-    title: 'Multi-Specialty Clinic & Appointment Portal',
-    demonstrationTag: 'Demonstration Architecture · Healthcare & Services',
-    description: 'A simple, secure portal where patients book appointments, doctors view patient history from their tablets, and consultation reminders are sent automatically.',
-    benefit: 'Reduces reception desk queues and missed appointments.',
-    keyFeatures: ['Simple mobile booking screen', 'Digital patient consultation notes', 'Automated SMS & WhatsApp reminders', 'Encrypted, private record storage'],
+    title: 'Healthcare\n& Clinic Portals',
+    tag: 'Healthcare & Services',
     link: '/solutions/smes',
+    accent: '#16C7B7',
+    icon: Activity,
+    illustration: (
+      <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="featured-card__illu">
+        <rect x="12" y="20" width="56" height="40" rx="6" stroke="#16C7B7" strokeWidth="1.5" opacity="0.5" />
+        <path d="M12 36 H68" stroke="#16C7B7" strokeWidth="1" opacity="0.3" />
+        <circle cx="24" cy="28" r="3" fill="#16C7B7" opacity="0.6" />
+        <circle cx="32" cy="28" r="3" fill="#12CDEB" opacity="0.4" />
+        <circle cx="40" cy="28" r="3" fill="#155EEF" opacity="0.3" />
+        <path d="M20 48 L28 44 L36 52 L44 40 L52 48 L60 42" stroke="#16C7B7" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" opacity="0.7" />
+        <rect x="24" y="6" width="16" height="16" rx="8" stroke="#12CDEB" strokeWidth="1.2" opacity="0.35" />
+        <path d="M32 10 V18 M28 14 H36" stroke="#12CDEB" strokeWidth="1.3" strokeLinecap="round" opacity="0.5" />
+      </svg>
+    ),
   },
   {
-    title: 'Autonomous Google Workspace Billing Pipeline',
-    demonstrationTag: 'Demonstration Architecture · Process Automation',
-    description: 'An event-driven script that turns spreadsheet order rows into professional PDF bills and emails them directly to clients within 2 seconds of order closure.',
-    benefit: 'Handles 500+ bills daily without a single clerk manually typing data.',
-    keyFeatures: ['Trigger-based automation', 'Branded PDF creation', 'Real-time ledger audit log', 'Zero monthly software subscription cost'],
+    title: 'Workspace\nAutomation',
+    tag: 'Process Automation',
     link: '/services/automation',
+    accent: '#155EEF',
+    icon: Zap,
+    illustration: (
+      <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="featured-card__illu">
+        <circle cx="40" cy="40" r="26" stroke="#155EEF" strokeWidth="1.5" strokeDasharray="4 4" opacity="0.3" />
+        <circle cx="40" cy="40" r="14" stroke="#12CDEB" strokeWidth="1.5" opacity="0.5" />
+        <path d="M38 34 L44 40 L38 46" stroke="#12CDEB" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" opacity="0.8" />
+        <path d="M14 40 H26" stroke="#155EEF" strokeWidth="1.2" strokeLinecap="round" opacity="0.4" />
+        <path d="M54 40 H66" stroke="#155EEF" strokeWidth="1.2" strokeLinecap="round" opacity="0.4" />
+        <path d="M40 14 V26" stroke="#155EEF" strokeWidth="1.2" strokeLinecap="round" opacity="0.4" />
+        <path d="M40 54 V66" stroke="#155EEF" strokeWidth="1.2" strokeLinecap="round" opacity="0.4" />
+        <circle cx="14" cy="40" r="3" fill="#155EEF" opacity="0.5" />
+        <circle cx="66" cy="40" r="3" fill="#16C7B7" opacity="0.5" />
+        <circle cx="40" cy="14" r="3" fill="#12CDEB" opacity="0.5" />
+        <circle cx="40" cy="66" r="3" fill="#155EEF" opacity="0.5" />
+      </svg>
+    ),
+  },
+  {
+    title: 'AI Assistants\n& Smart Bots',
+    tag: 'Intelligent Automation',
+    link: '/services/ai',
+    accent: '#12CDEB',
+    icon: Bot,
+    illustration: (
+      <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="featured-card__illu">
+        <rect x="22" y="24" width="36" height="32" rx="6" stroke="#12CDEB" strokeWidth="1.5" opacity="0.5" />
+        <circle cx="33" cy="38" r="4" stroke="#12CDEB" strokeWidth="1.3" opacity="0.6" />
+        <circle cx="47" cy="38" r="4" stroke="#12CDEB" strokeWidth="1.3" opacity="0.6" />
+        <path d="M33 48 Q40 54 47 48" stroke="#16C7B7" strokeWidth="1.3" strokeLinecap="round" opacity="0.6" />
+        <line x1="40" y1="24" x2="40" y2="16" stroke="#12CDEB" strokeWidth="1.2" opacity="0.4" />
+        <circle cx="40" cy="14" r="3" fill="#12CDEB" opacity="0.5" />
+        <path d="M18 36 H22" stroke="#155EEF" strokeWidth="1.2" strokeLinecap="round" opacity="0.4" />
+        <path d="M58 36 H62" stroke="#155EEF" strokeWidth="1.2" strokeLinecap="round" opacity="0.4" />
+        <path d="M18 44 H22" stroke="#155EEF" strokeWidth="1.2" strokeLinecap="round" opacity="0.4" />
+        <path d="M58 44 H62" stroke="#155EEF" strokeWidth="1.2" strokeLinecap="round" opacity="0.4" />
+        <rect x="28" y="56" width="8" height="6" rx="2" stroke="#16C7B7" strokeWidth="1" opacity="0.35" />
+        <rect x="44" y="56" width="8" height="6" rx="2" stroke="#16C7B7" strokeWidth="1" opacity="0.35" />
+      </svg>
+    ),
   },
 ];
 
@@ -230,21 +290,29 @@ const SIMPLE_STEPS = [
     num: '01',
     title: 'Plain-English Consultation',
     desc: 'You tell us what your business does and what challenges you are facing. No technical jargon required — we listen and understand your daily workflow.',
+    icon: MessagesSquare,
+    accent: '#155EEF',
   },
   {
     num: '02',
     title: 'Clear Plan & Fixed Price',
     desc: 'We provide a straightforward proposal outlining what we will build, how it will look, exact completion dates, and a transparent fixed price with zero surprises.',
+    icon: FileText,
+    accent: '#12CDEB',
   },
   {
     num: '03',
     title: 'Regular Previews & Updates',
     desc: 'You see working previews every two weeks. We refine the screens based on your feedback so the final software feels completely natural for you and your staff.',
+    icon: Eye,
+    accent: '#16C7B7',
   },
   {
     num: '04',
     title: 'Launch & 30-Day Support',
     desc: 'We handle setup, train your team, and provide 30 days of dedicated support to ensure everything runs smoothly. You own 100% of the code and assets.',
+    icon: Rocket,
+    accent: '#155EEF',
   },
 ];
 
@@ -831,53 +899,47 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ══ 6. REALISTIC DEMONSTRATION SHOWCASE (WHAT SOLUTIONS LOOK LIKE) ══ */}
-      <section className="section" aria-labelledby="showcase-heading">
+      {/* ══ 6. FEATURED SOLUTIONS SHOWCASE (JABIL-INSPIRED VISUAL CARDS) ══ */}
+      <section className="featured-solutions-band" aria-labelledby="showcase-heading">
         <div className="container">
-          <header className="studio-section-header text-center">
-            <span className="studio-section-eyebrow">Solution Architecture</span>
-            <h2 id="showcase-heading" className="studio-section-title">
+          <header className="featured-solutions-header">
+            <span className="featured-badge">Featured</span>
+            <h2 id="showcase-heading" className="featured-solutions-title">
               What Finished Solutions Look and Feel Like
             </h2>
-            <p className="studio-section-desc">
-              Explore demonstration frameworks of our custom business systems. Each system is designed to be intuitive,
-              clean, and immediately usable by non-technical staff.
-            </p>
           </header>
 
-          <div className="demo-architecture-grid">
-            {DEMO_SHOWCASES.map((demo, idx) => (
-              <article key={idx} className="demo-architecture-card">
-                <span className="demo-arch-tag">{demo.demonstrationTag}</span>
-                <h3 className="demo-arch-title">{demo.title}</h3>
-                <p className="demo-arch-desc">{demo.description}</p>
+          <div className="featured-solutions-grid">
+            {FEATURED_SOLUTIONS.map((sol, idx) => (
+              <Link key={idx} to={sol.link} className="featured-card" style={{ '--fcard-accent': sol.accent }}>
+                {/* Card accent border glow on left */}
+                <div className="featured-card__glow" aria-hidden="true" />
 
-                <div className="demo-arch-benefit">
-                  <strong>Primary Business Benefit:</strong> {demo.benefit}
+                {/* SVG illustration */}
+                <div className="featured-card__visual">
+                  {sol.illustration}
                 </div>
 
-                <div className="demo-arch-features">
-                  {demo.keyFeatures.map((feat, fIdx) => (
-                    <div key={fIdx} className="demo-arch-feature-item">
-                      <Check size={14} className="text-teal" />
-                      <span>{feat}</span>
-                    </div>
+                {/* Title (supports line breaks) */}
+                <h3 className="featured-card__title">
+                  {sol.title.split('\n').map((line, i) => (
+                    <span key={i}>{line}{i === 0 && <br />}</span>
                   ))}
-                </div>
+                </h3>
 
-                <div className="demo-arch-action">
-                  <Link to={demo.link} className="link-arrow">
-                    Explore detailed architecture <ArrowRight size={14} />
-                  </Link>
+                {/* Explore CTA */}
+                <div className="featured-card__cta">
+                  <span>EXPLORE</span>
+                  <ChevronRight size={16} />
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ══ 7. TRANSPARENT 4-STEP WORKING PROCESS ══════════════ */}
-      <section className="section section--soft" aria-labelledby="process-heading">
+      {/* ══ 7. PREMIUM 4-STEP WORKING PROCESS (TIMELINE) ══════════════ */}
+      <section className="section section--soft process-section" aria-labelledby="process-heading">
         <div className="container">
           <header className="studio-section-header text-center">
             <span className="studio-section-eyebrow">How We Work With You</span>
@@ -885,18 +947,51 @@ const Home = () => {
               A Straightforward Process with Zero Surprises
             </h2>
             <p className="studio-section-desc">
-              We make software development simple, transparent, and stress-free. Here is what working with us looks like from day one.
+              We make software development simple, transparent, and stress-free.<br />
+              Here is what working with us looks like from day one.
             </p>
           </header>
 
-          <div className="studio-process-grid">
-            {SIMPLE_STEPS.map((st) => (
-              <div key={st.num} className="studio-process-card">
-                <div className="studio-process-num">{st.num}</div>
-                <h3 className="studio-process-title">{st.title}</h3>
-                <p className="studio-process-desc">{st.desc}</p>
-              </div>
-            ))}
+          <div className="process-timeline">
+            {/* Connecting line behind all steps */}
+            <div className="process-timeline__line" aria-hidden="true" />
+
+            {SIMPLE_STEPS.map((st, idx) => {
+              const StepIcon = st.icon;
+              return (
+                <div key={st.num} className="process-timeline__step">
+                  {/* Icon circle sitting on the timeline */}
+                  <div className="process-step__icon-ring" style={{ '--step-accent': st.accent }}>
+                    <StepIcon size={22} />
+                  </div>
+
+                  {/* Step number pill */}
+                  <span className="process-step__num" style={{ color: st.accent }}>Step {st.num}</span>
+
+                  {/* Content card */}
+                  <div className="process-step__card">
+                    <h3 className="process-step__title">{st.title}</h3>
+                    <p className="process-step__desc">{st.desc}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Bottom trust strip */}
+          <div className="process-trust-strip">
+            <div className="process-trust-item">
+              <ShieldCheck size={18} />
+              <span>Fixed Price — No Hidden Fees</span>
+            </div>
+            <div className="process-trust-item">
+              <CheckCircle2 size={18} />
+              <span>100% Code & IP Ownership</span>
+            </div>
+            <div className="process-trust-item">
+              <Headphones size={18} />
+              <span>30-Day Post-Launch Support</span>
+            </div>
           </div>
         </div>
       </section>

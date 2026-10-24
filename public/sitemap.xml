@@ -34,6 +34,16 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>https://ashbit.in/services/mobile</loc>
+    <priority>0.88</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://ashbit.in/services/enterprise</loc>
+    <priority>0.88</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://ashbit.in/pricing</loc>
     <priority>0.90</priority>
     <changefreq>monthly</changefreq>
@@ -44,7 +54,12 @@
     <changefreq>monthly</changefreq>
   </url>
 
-  <!-- ═══ Solutions by Segment ═══ -->
+  <!-- ═══ Solutions ═══ -->
+  <url>
+    <loc>https://ashbit.in/solutions</loc>
+    <priority>0.92</priority>
+    <changefreq>weekly</changefreq>
+  </url>
   <url>
     <loc>https://ashbit.in/solutions/startups</loc>
     <priority>0.85</priority>
@@ -59,6 +74,18 @@
     <loc>https://ashbit.in/solutions/enterprises</loc>
     <priority>0.85</priority>
     <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- ═══ Products ═══ -->
+  <url>
+    <loc>https://ashbit.in/products</loc>
+    <priority>0.92</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://ashbit.in/products/retail-management</loc>
+    <priority>0.90</priority>
+    <changefreq>weekly</changefreq>
   </url>
 
   <!-- ═══ Features ═══ -->
