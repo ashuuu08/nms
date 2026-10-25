@@ -1,10 +1,6 @@
 {
-  "cleanUrls": true,
-  "trailingSlash": false,
   "redirects": [
-    { "source": "/company", "destination": "/company/about", "permanent": true },
-    { "source": "/features/:slug", "destination": "/features", "permanent": true },
-    { "source": "/solutions", "destination": "/services", "permanent": true }
+    { "source": "/company", "destination": "/company/about", "permanent": true }
   ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
