@@ -102,15 +102,27 @@
 /* Dropdown */
 .navbar__dropdown {
   position: absolute;
-  top: calc(100% + 8px);
+  top: calc(100% + 6px);
   left: 0;
-  min-width: 240px;
+  min-width: 260px;
   background: var(--surface);
   border: 1px solid var(--border-soft);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
   padding: 8px;
   animation: fadeUp 0.18s var(--ease-out) both;
+  z-index: 1050;
+}
+
+/* Invisible bridge so mouse hover is never lost when moving from button to menu */
+.navbar__dropdown::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background: transparent;
 }
 
 .navbar__dropdown-item {

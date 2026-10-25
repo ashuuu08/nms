@@ -11,14 +11,28 @@ const Navbar = () => {
   const [mobileExpanded, setMobileExpanded] = useState(null);
   const location                          = useLocation();
   const navRef                            = useRef(null);
+  const hoverTimeoutRef                   = useRef(null);
+
+  const clearHoverTimeout = () => {
+    if (hoverTimeoutRef.current) {
+      clearTimeout(hoverTimeoutRef.current);
+      hoverTimeoutRef.current = null;
+    }
+  };
 
   // Close on route change
   useEffect(() => {
+    clearHoverTimeout();
     setIsOpen(false);
     setOpenDropdown(null);
     setMobileExpanded(null);
     window.scrollTo(0, 0);
   }, [location.pathname]);
+
+  // Cleanup on unmount
+  useEffect(() => {
+    return () => clearHoverTimeout();
+  }, []);
 
   // Scroll detection
   useEffect(() => {
@@ -38,6 +52,7 @@ const Navbar = () => {
   useEffect(() => {
     const handler = (e) => {
       if (navRef.current && !navRef.current.contains(e.target)) {
+        clearHoverTimeout();
         setOpenDropdown(null);
       }
     };
@@ -51,8 +66,28 @@ const Navbar = () => {
     return location.pathname.startsWith(path);
   };
 
-  const handleDropdown = (name) => {
+  const handleMouseEnter = (name) => {
+    clearHoverTimeout();
+    setOpenDropdown(name);
+  };
+
+  const handleMouseLeave = () => {
+    clearHoverTimeout();
+    hoverTimeoutRef.current = setTimeout(() => {
+      setOpenDropdown(null);
+    }, 180);
+  };
+
+  const handleDropdownToggle = (e, name) => {
+    e.preventDefault();
+    e.stopPropagation();
+    clearHoverTimeout();
     setOpenDropdown(prev => prev === name ? null : name);
+  };
+
+  const handleItemClick = () => {
+    clearHoverTimeout();
+    setOpenDropdown(null);
   };
 
   return (
@@ -78,41 +113,35 @@ const Navbar = () => {
               link.children ? (
                 <li
                   key={link.name}
-                  className="navbar__item navbar__item--dropdown"
-                  onMouseEnter={() => setOpenDropdown(link.name)}
-                  onMouseLeave={() => setOpenDropdown(null)}
+                  className={`navbar__item navbar__item--dropdown ${openDropdown === link.name ? 'is-open' : ''}`}
+                  onMouseEnter={() => handleMouseEnter(link.name)}
+                  onMouseLeave={handleMouseLeave}
                 >
-                  {link.path ? (
-                    <Link
-                      to={link.path}
-                      className={`navbar__btn ${isActive(link.path) || link.children.some(c => isActive(c.path)) ? 'active' : ''}`}
-                      onClick={() => setOpenDropdown(null)}
-                      aria-haspopup="true"
-                    >
-                      {link.name}
-                      <ChevronDown size={14} className={`navbar__chevron ${openDropdown === link.name ? 'open' : ''}`} />
-                    </Link>
-                  ) : (
-                    <button
-                      className={`navbar__btn ${link.children.some(c => isActive(c.path)) ? 'active' : ''}`}
-                      onClick={() => handleDropdown(link.name)}
-                      aria-expanded={openDropdown === link.name}
-                      aria-haspopup="true"
-                    >
-                      {link.name}
-                      <ChevronDown size={14} className={`navbar__chevron ${openDropdown === link.name ? 'open' : ''}`} />
-                    </button>
-                  )}
+                  <button
+                    type="button"
+                    className={`navbar__btn ${isActive(link.path) || link.children.some(c => isActive(c.path)) ? 'active' : ''}`}
+                    onClick={(e) => handleDropdownToggle(e, link.name)}
+                    aria-expanded={openDropdown === link.name}
+                    aria-haspopup="true"
+                  >
+                    {link.name}
+                    <ChevronDown size={14} className={`navbar__chevron ${openDropdown === link.name ? 'open' : ''}`} />
+                  </button>
 
                   {openDropdown === link.name && (
-                    <div className="navbar__dropdown" role="menu">
+                    <div
+                      className="navbar__dropdown"
+                      role="menu"
+                      onMouseEnter={() => handleMouseEnter(link.name)}
+                      onMouseLeave={handleMouseLeave}
+                    >
                       {link.children.map((child) => (
                         <Link
                           key={child.path}
                           to={child.path}
                           className={`navbar__dropdown-item ${isActive(child.path) ? 'active' : ''}`}
                           role="menuitem"
-                          onClick={() => setOpenDropdown(null)}
+                          onClick={handleItemClick}
                         >
                           <span className="navbar__dropdown-name">{child.name}</span>
                           <span className="navbar__dropdown-desc">{child.desc}</span>
